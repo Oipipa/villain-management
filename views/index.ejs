@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Villains</title>
+</head>
+<body>
+<h1>List of Villains</h1>
+<ul>
+        <% villains.forEach(function(villain) { %>
+            <li>
+                <%= villain.name %> (Age: <%= villain.age %>, Power: <%= villain.power %>)
+                <form action="/delete-villain/<%= villain.id %>" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+            <li>
+                <%= villain.name %> (Age: <%= villain.age %>, Power: <%= villain.power %>)
+                <!-- Add an Edit Button -->
+                <button onclick="document.getElementById('edit-form-<%= villain.id %>').style.display='block'">Edit</button>
+                <form id="edit-form-<%= villain.id %>" action="/edit-villain/<%= villain.id %>" method="post" style="display:none;">
+                    <input type="text" name="name" value="<%= villain.name %>" required>
+                    <input type="number" name="age" value="<%= villain.age %>" required>
+                    <input type="text" name="power" value="<%= villain.power %>" required>
+                    <button type="submit">Update</button>
+                </form>
+            </li>
+        <% }); %>
+</ul>
+
+<h2>Add a New Villain</h2>
+<form action="/add-villain" method="post">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="text" name="power" placeholder="Special Power" required>
+    <button type="submit">Add Villain</button>
+</form>
+</body>
+</html>
