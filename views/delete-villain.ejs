@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Villain</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Delete Villain</h1>
+<p>Are you sure you want to delete <%= villain.name %>? This action cannot be undone.</p>
+<form action="/delete-villain/<%= villain.id %>" method="post">
+    <button type="submit">Delete</button>
+</form>
+<a href="/manage-villains">Cancel</a>
+<script src="/main.js"></script>
+</body>
+</html>

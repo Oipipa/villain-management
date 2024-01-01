@@ -1,7 +1,7 @@
 {
-  "name": "full-stack-evil-stuff",
+  "name": "villain-management",
   "version": "1.0.0",
-  "description": "",
+  "description": "A webapp containing information about villains",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
