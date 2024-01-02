@@ -9,7 +9,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Define your routes here
 // Root Route - Landing Page
 app.get('/', (req, res) => {
     res.render('landing');
