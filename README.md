@@ -11,3 +11,11 @@ Or
 ```
 npm install
 ```
+
+Next, run the server 
+
+```
+node app.js
+```
+
+And enjoy using the app!
